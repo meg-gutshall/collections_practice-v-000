@@ -48,7 +48,7 @@ def find_a(array)
   # end
   # a_words
   array.each do |item|
-    item[0] == "a" ? a_words << item
+    item[0] == "a" ? a_words << item : nil
   end
 end
 
