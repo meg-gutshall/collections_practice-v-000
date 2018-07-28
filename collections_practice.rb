@@ -38,16 +38,18 @@ end
 
 # Find all strings that start with the letter a
 def find_a(array)
-  letters = []
   a_words = []
-
-  array.each do |word|
-    letters = word.split("")
-    if letters[0] == "a"
-      a_words.push(letters.join)
-    end
+  #
+  # array.each do |word|
+  #   letters = word.split("")
+  #   if letters[0] == "a"
+  #     a_words.push(letters.join)
+  #   end
+  # end
+  # a_words
+  array.each do |item|
+    item[0] == "a" ? a_words << item
   end
-  a_words
 end
 
 # Add all integers in the array and return the sum
