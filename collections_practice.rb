@@ -6,6 +6,10 @@ end
 # Sort array in descending order
 def sort_array_desc(array)
   array.sort.reverse
+  # Other solution
+  # array.sort do | left, right|
+  #   right <=> left
+  # end
 end
 
 # Sort array by longest to shortest words
