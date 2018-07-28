@@ -38,8 +38,7 @@ end
 
 # Find all strings that start with the letter a
 def find_a(array)
-  a_words = []
-  array.find_all { |item| item[0] == "a" ? a_words << item : nil }
+  array.find_all { |item| item[0] == "a" }
 end
 
 # Add all integers in the array and return the sum
