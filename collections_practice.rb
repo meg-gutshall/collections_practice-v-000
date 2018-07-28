@@ -47,9 +47,7 @@ def find_a(array)
   #   end
   # end
   # a_words
-  array.find_all do |item|
-    item[0] == "a" ? a_words << item : nil
-  end
+  array.find_all { |item| item[0] == "a" ? a_words << item : nil }
 end
 
 # Add all integers in the array and return the sum
