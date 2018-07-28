@@ -39,14 +39,6 @@ end
 # Find all strings that start with the letter a
 def find_a(array)
   a_words = []
-  #
-  # array.each do |word|
-  #   letters = word.split("")
-  #   if letters[0] == "a"
-  #     a_words.push(letters.join)
-  #   end
-  # end
-  # a_words
   array.find_all { |item| item[0] == "a" ? a_words << item : nil }
 end
 
