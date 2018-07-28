@@ -31,16 +31,9 @@ end
 
 # Replace the third letter of each string with a $
 def kesha_maker(array)
-  letters = []
-  kesha_array = []
-
-  array.each do |word| # Break array into strings
-    letters = word.split("") # Turn strings into array by letter
-    letters.slice!(2) # Replace third letter with $
-    letters.insert(2, "$") # Turn letter array back to string
-    kesha_array.push(letters.join) # Add strings to array
+  array.each do |item|
+    item[2] = "$"
   end
-  kesha_array
 end
 
 # Find all strings that start with the letter a
