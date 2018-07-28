@@ -6,6 +6,10 @@ end
 # Sort array in descending order
 def sort_array_desc(array)
   array.sort.reverse
+  # Other solution
+  # array.sort do | left, right|
+  #   right <=> left
+  # end
 end
 
 # Sort array by longest to shortest words
@@ -27,35 +31,21 @@ end
 
 # Replace the third letter of each string with a $
 def kesha_maker(array)
-  letters = []
-  kesha_array = []
-
-  array.each do |word| # Break array into strings
-    letters = word.split("") # Turn strings into array by letter
-    letters.slice!(2) # Replace third letter with $
-    letters.insert(2, "$") # Turn letter array back to string
-    kesha_array.push(letters.join) # Add strings to array
+  array.each do |item|
+    item[2] = "$"
   end
-  kesha_array
 end
 
 # Find all strings that start with the letter a
 def find_a(array)
-  letters = []
-  a_words = []
-
-  array.each do |word|
-    letters = word.split("")
-    if letters[0] == "a"
-      a_words.push(letters.join)
-    end
-  end
-  a_words
+  array.find_all { |item| item[0] == "a" }
 end
 
 # Add all integers in the array and return the sum
 def sum_array(array)
   array.inject { |sum, n| sum + n }
+  # Shorter solution
+  # array.inject(:+)
 end
 
 # Add "s" to the end of each word
