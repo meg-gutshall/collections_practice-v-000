@@ -43,7 +43,8 @@ end
 
 # Add all integers in the array and return the sum
 def sum_array(array)
-  array.inject { |sum, n| sum + n }
+  # array.inject { |sum, n| sum + n }
+  array.inject(:+)
 end
 
 # Add "s" to the end of each word
